@@ -19,7 +19,7 @@ void Item::getInfo()
 }
 int Item::useItem(int multiplier)
 {
-
+	return 0; // Add stuff here
 }
 
 // Food Item
@@ -37,7 +37,7 @@ void Food::getInfo()
 }
 int Food::useItem(int multiplier)
 {
-
+	return 0; // Add stuff here
 }
 
 // Drink Item
@@ -55,7 +55,7 @@ void Drink::getInfo()
 }
 int Drink::useItem(int multiplier)
 {
-
+	return 0; // Add stuff here
 }
 
 // Toy Item
@@ -73,5 +73,5 @@ void Toy::getInfo()
 }
 int Toy::useItem(int multiplier)
 {
-
+	return 0; // Add stuff here
 }
