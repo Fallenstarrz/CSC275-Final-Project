@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "LittleMonster.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -89,5 +90,22 @@ void LittleMonster::setHealth(int health)
 // LittleMonster Display
 void LittleMonster::display()
 {
+	cout << "Name: " << m_name <<endl;
+	cout << "Hunger: " << m_hunger << endl;
+	cout << "Thirst: " << m_thirst << endl;
+	cout << "Happiness: " << m_happiness << endl;
+	cout << "Age: " << m_age << endl;
+	cout << "Health: " << m_health << endl;
+}
 
+bool LittleMonster::dead()
+{
+	if (m_health <= 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

@@ -41,4 +41,7 @@ public:
 
 	// Display
 	void display();
+
+	// Functions
+	bool dead();
 };

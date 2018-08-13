@@ -22,7 +22,6 @@ public:
 class Food:Item
 {
 private:
-
 protected:
 public:
 	Food();
@@ -35,7 +34,6 @@ public:
 class Drink:Item
 {
 private:
-
 protected:
 public:
 	Drink();
@@ -48,7 +46,6 @@ public:
 class Toy:Item
 {
 private:
-
 protected:
 public:
 	Toy();
