@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include <string>
+#include "LittleMonster.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ public:
 	Item(string name, int multiplier);
 
 	void getInfo();
-	int useItem(int multiplier);
+	int useItem(int multiplier, LittleMonster& monster);
 };
 
 class Food:Item
@@ -28,7 +29,7 @@ public:
 	Food(string name, int multiplier);
 
 	void getInfo();
-	int useItem(int multiplier);
+	int useItem(int multiplier, LittleMonster& monster);
 };
 
 class Drink:Item
@@ -40,7 +41,7 @@ public:
 	Drink(string name, int multiplier);
 
 	void getInfo();
-	int useItem(int multiplier);
+	int useItem(int multiplier, LittleMonster& monster);
 };
 
 class Toy:Item
@@ -52,5 +53,5 @@ public:
 	Toy(string name, int multiplier);
 
 	void getInfo();
-	int useItem(int multiplier);
+	int useItem(int multiplier, LittleMonster& monster);
 };

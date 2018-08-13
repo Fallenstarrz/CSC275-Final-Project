@@ -1,10 +1,11 @@
 #include "stdafx.h"
 #include "item.h"
 #include <string>
+#include "LittleMonster.h"
 
 using namespace std;
 
-// Base Item
+// Base Item: Used to increase Health
 Item::Item()
 {
 
@@ -17,12 +18,19 @@ void Item::getInfo()
 {
 
 }
-int Item::useItem(int multiplier)
+int Item::useItem(int multiplier, LittleMonster& newFriend)
 {
-	return 0; // Add stuff here
+	int numToAdd = multiplier * 10;
+	int hunger = newFriend.getHunger();
+	int thirst = newFriend.getThirst();
+	int happiness = newFriend.getHappiness();
+	newFriend.setHunger(hunger + numToAdd);
+	newFriend.setThirst(thirst + numToAdd);
+	newFriend.setHappiness(happiness + numToAdd);
+	return 0;
 }
 
-// Food Item
+// Food Item: Used to increase Hunger
 Food::Food()
 {
 
@@ -35,12 +43,15 @@ void Food::getInfo()
 {
 
 }
-int Food::useItem(int multiplier)
+int Food::useItem(int multiplier, LittleMonster& newFriend)
 {
-	return 0; // Add stuff here
+	int numToAdd = multiplier * 10;
+	int hunger = newFriend.getHunger();
+	newFriend.setHunger(hunger + numToAdd);
+	return 0;
 }
 
-// Drink Item
+// Drink Item: Used to increase Thirst
 Drink::Drink()
 {
 
@@ -53,12 +64,15 @@ void Drink::getInfo()
 {
 
 }
-int Drink::useItem(int multiplier)
+int Drink::useItem(int multiplier, LittleMonster& newFriend)
 {
-	return 0; // Add stuff here
+	int numToAdd = multiplier * 10;
+	int thirst = newFriend.getThirst();
+	newFriend.setThirst(thirst + numToAdd);
+	return 0;
 }
 
-// Toy Item
+// Toy Item: Used to increase Happiness
 Toy::Toy()
 {
 
@@ -71,7 +85,10 @@ void Toy::getInfo()
 {
 
 }
-int Toy::useItem(int multiplier)
+int Toy::useItem(int multiplier, LittleMonster& newFriend)
 {
-	return 0; // Add stuff here
+	int numToAdd = multiplier * 10;
+	int happiness = newFriend.getHappiness();
+	newFriend.setHappiness(happiness + numToAdd);
+	return 0;
 }
