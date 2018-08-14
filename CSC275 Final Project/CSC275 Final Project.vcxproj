@@ -150,12 +150,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="GameFunctions.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="LittleMonster.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameFunctions.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="CSC275 Final Project.cpp" />
     <ClCompile Include="LittleMonster.cpp" />
