@@ -16,8 +16,8 @@ public:
 	Item();
 	Item(string name, int multiplier);
 
-	void getInfo();
-	int useItem(int multiplier, LittleMonster& monster);
+	virtual void getInfo();
+	virtual int useItem(int multiplier, LittleMonster& monster);
 };
 
 class Food:Item
