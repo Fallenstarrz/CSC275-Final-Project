@@ -6,12 +6,13 @@
 
 using namespace std;
 
+// Parent Class for Items
 class Item
 {
 private:
+protected:
 	string m_name;
 	int m_multiplier;
-protected:
 public:
 	Item();
 	Item(string name, int multiplier);
@@ -20,6 +21,7 @@ public:
 	virtual int useItem(int multiplier, LittleMonster& monster);
 };
 
+// Class for Food Items
 class Food:Item
 {
 private:
@@ -32,6 +34,7 @@ public:
 	int useItem(int multiplier, LittleMonster& monster);
 };
 
+// Class for Drink Items
 class Drink:Item
 {
 private:
@@ -44,6 +47,7 @@ public:
 	int useItem(int multiplier, LittleMonster& monster);
 };
 
+// Class for Toy Items
 class Toy:Item
 {
 private:
